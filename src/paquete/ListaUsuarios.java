@@ -13,7 +13,19 @@ public static void crearAdmin() {
     usuarios.add(admin);
 
 }
+public static boolean comprobarContrasenna(String contrasegna, String codigo){
+    boolean correcto= false;
+    for(Persona usuario:usuarios){
+        if(usuario.getCodigo().equals(codigo) && usuario.getContrasegna().equals(contrasegna)){
+                correcto=true;
+            }
+        
+    }
 
+
+
+    return correcto;
+}
 public static void agregarusuario(Persona usuarioNuevo,int codigo){
     String cod= String.valueOf(codigo);
     ListaUsuarios.setCodigo(cod);
@@ -37,6 +49,7 @@ public static boolean buscarUsuario(String codigo){
         if(encontrado){break;}
         if(persona instanceof Persona usuario && usuario.getCodigo().equals(codigo)){
                 encontrado= true;
+                
             }
     }
     return encontrado;
