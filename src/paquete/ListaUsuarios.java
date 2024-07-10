@@ -21,9 +21,6 @@ public static boolean comprobarContrasenna(String contrasegna, String codigo){
             }
         
     }
-
-
-
     return correcto;
 }
 public static void agregarusuario(Persona usuarioNuevo,int codigo){

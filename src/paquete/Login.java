@@ -129,6 +129,8 @@ public class Login extends JFrame{
                 JOptionPane.showMessageDialog(null,"Usuario encontrado!");
                 if(ListaUsuarios.comprobarContrasenna(contras, codigo.getText())){
                     JOptionPane.showMessageDialog(null,"Contraseña correcta, accediendo al sistema...");
+                    
+                    
                 }else{
                     JOptionPane.showMessageDialog(null,"La contraseña ingresada es incorrecta...");
                 }
